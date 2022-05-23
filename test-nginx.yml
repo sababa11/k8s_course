@@ -18,6 +18,8 @@ spec:
       mountPath: /storage
    ports: 
    - containerPort: 8080
+ nodeSelector:
+        db: "run"
  volumes:
   - name: persistent-storage
     emptyDir: {}
