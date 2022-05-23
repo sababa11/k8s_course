@@ -8,14 +8,14 @@ spec:
    image: nginx:1.7.9 
    volumeMounts:
     - name: persistent-storage
-      mountPath: /data/temp
+      mountPath: /storage
    ports: 
    - containerPort: 80
  - name: springapp
    image: yanivomc/spring-music:latest
    volumeMounts:
     - name: persistent-storage
-      mountPath: /app/data
+      mountPath: /storage
    ports: 
    - containerPort: 8080
  volumes:
